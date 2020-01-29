@@ -14,6 +14,7 @@ const styles = {
   bg: 'primary',
 }
 
+// @ts-ignore
 const App: FC = () => (
   <ThemeProvider theme={theme}>
     <Header />
@@ -21,9 +22,12 @@ const App: FC = () => (
     <Container p={4} bg={'muted'}>
       <Heading variant={'large'}>Heading h1</Heading>
       <Heading variant={'small'}>Heading h1</Heading>
-
-      <Button variant={'primary'}>Button Primary</Button>
-      <Button variant={'secondary'}>Button Secondary</Button>
+      <Button variant={'primary'} onClick={(e) => console.log(e.target)}>
+        Button Primary
+      </Button>
+      <Button variant={'secondary'} onMouseDown={(e) => console.log('Hello')}>
+        Button Secondary
+      </Button>
 
       <Styled.h1>Hello, styled heading!</Styled.h1>
     </Container>
