@@ -14,7 +14,6 @@ const styles = {
   bg: 'primary',
 }
 
-// @ts-ignore
 const App: FC = () => (
   <ThemeProvider theme={theme}>
     <Header />
