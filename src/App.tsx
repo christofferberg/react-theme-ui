@@ -1,35 +1,20 @@
-/** @jsx jsx */
 import React, { FC } from 'react'
-import { ThemeProvider, jsx, Styled } from 'theme-ui'
+import { Route, Switch } from 'react-router-dom'
+import { ThemeProvider } from 'theme-ui'
+
+// Theme
 import theme from 'theme'
 
-// Components
-import { Header } from 'components'
-import { Button } from 'components'
-
-import { Container, Box, Flex, Heading } from '@theme-ui/components'
-
-const styles = {
-  color: 'text',
-  bg: 'primary',
-}
+// Routes
+import { Home } from 'pages/Home'
+import { About } from 'pages/About'
 
 const App: FC = () => (
   <ThemeProvider theme={theme}>
-    <Header />
-
-    <Container p={4} bg={'muted'}>
-      <Heading variant={'large'}>Heading h1</Heading>
-      <Heading variant={'small'}>Heading h1</Heading>
-      <Button variant={'primary'} onClick={(e) => console.log(e.target)}>
-        Button Primary
-      </Button>
-      <Button variant={'secondary'} onMouseDown={(e) => console.log('Hello')}>
-        Button Secondary
-      </Button>
-
-      <Styled.h1>Hello, styled heading!</Styled.h1>
-    </Container>
+    <Switch>
+      <Route path="/" component={Home} exact />
+      <Route path="/about" component={About} />
+    </Switch>
   </ThemeProvider>
 )
 

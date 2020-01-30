@@ -1,3 +1,6 @@
+import buttons from 'theme/variants/buttons'
+import text from 'theme/variants/text'
+
 // example theme.js
 export default {
   space: [0, 4, 8, 16, 32, 64, 128, 256, 512],
@@ -7,6 +10,7 @@ export default {
     heading: 'inherit',
     monospace: 'Menlo, monospace',
   },
+  breakpoints: ['500px', '800px', '1100px'],
   fontSizes: [12, 14, 16, 20, 24, 32, 48, 64, 96],
   fontWeights: {
     body: 400,
@@ -18,9 +22,9 @@ export default {
     heading: 1.125,
   },
   sizes: {
-    containerSmall: '200px',
     container: '1140px',
   },
+  borderRadius: [2, 4, 6, 8],
   colors: {
     text: '#1b1b1b',
     background: '#fff',
@@ -28,42 +32,27 @@ export default {
     secondary: '#30c',
     white: '#fff',
     muted: '#f6f6f6',
+    modes: {
+      dark: {
+        text: '#fff',
+        background: '#202040',
+        primary: '#b030b0',
+        secondary: '#602080',
+        muted: '#202060',
+      },
+      candy: {
+        text: '#fff',
+        background: '#f7f7f9',
+        primary: '#fdd365',
+        secondary: '#fb8d62',
+        muted: '#61d4b3',
+      },
+    },
   },
-  breakpoints: ['500px', '800px', '1100px'],
 
   // Variants
-  buttons: {
-    default: {
-      fontWeight: 'bold',
-      m: 0,
-      px: 3,
-      py: 2,
-    },
-    primary: {
-      color: 'white',
-      bg: 'primary',
-    },
-    secondary: {
-      color: 'white',
-      bg: 'secondary',
-    },
-  },
-  text: {
-    heading: {
-      fontFamily: 'heading',
-      fontWeight: 'heading',
-      lineHeight: 'heading',
-      color: 'red',
-    },
-    small: {
-      fontSize: [1, 2, 3],
-      color: 'primary',
-    },
-    large: {
-      fontSize: [3, 4, 5],
-      color: 'secondary',
-    },
-  },
+  ...buttons,
+  ...text,
 
   // MDX Components
   styles: {
@@ -78,10 +67,12 @@ export default {
     h1: {
       variant: 'text.heading',
       fontSize: [5, 6, 7],
+      m: 0,
     },
     h2: {
       variant: 'text.heading',
       fontSize: [3, 4, 5],
+      m: 0,
     },
   },
 }
