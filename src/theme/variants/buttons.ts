@@ -16,8 +16,6 @@ export default {
       color: 'white',
       bg: 'secondary',
       borderRadius: 3,
-      transition: `background ${transition.default}`,
-
       '&:hover': {
         bg: 'primary',
       },
