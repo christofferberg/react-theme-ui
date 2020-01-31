@@ -3,7 +3,7 @@ import { FC } from 'react'
 import { jsx, Styled } from 'theme-ui'
 
 // Utils
-import { SpringFadeUp } from 'utils/animations'
+import { SpringFadeUp } from 'components/Animations'
 
 // Layout
 import { AppLayout } from 'layout/AppLayout'
