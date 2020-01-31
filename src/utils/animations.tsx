@@ -11,7 +11,7 @@ import { useInView } from 'react-intersection-observer'
 export const SpringFadeUp: FC = ({ children }) => {
   const [ref, inView] = useInView({
     triggerOnce: true,
-    threshold: 0,
+    threshold: 0.3,
   })
 
   const fade = useSpring({
@@ -25,7 +25,7 @@ export const SpringFadeUp: FC = ({ children }) => {
   })
 
   return (
-    <div ref={ref}>
+    <div className="SpringFadeUp" ref={ref}>
       <animated.div style={fade}>{children}</animated.div>
     </div>
   )

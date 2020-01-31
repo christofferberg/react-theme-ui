@@ -12,9 +12,6 @@ export default {
       color: 'white',
       bg: 'secondary',
       borderRadius: 3,
-      '&:hover': {
-        bg: 'muted',
-      },
     },
   },
 }

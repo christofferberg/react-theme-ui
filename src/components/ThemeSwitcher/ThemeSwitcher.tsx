@@ -29,7 +29,7 @@ export const ThemeSwitcher: FC = () => {
         color: 'text',
         border: theme => `2px solid ${theme.colors.primary}`,
       }}
-      onClick={e => setNextTheme()}
+      onClick={() => setNextTheme()}
     >
       {colorMode}
     </button>
