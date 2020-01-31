@@ -30,7 +30,6 @@ export default {
     background: '#fff',
     primary: '#07c',
     secondary: '#30c',
-    white: '#fff',
     muted: '#f6f6f6',
     modes: {
       dark: {
