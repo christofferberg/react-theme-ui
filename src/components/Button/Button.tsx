@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import React, { ComponentPropsWithRef, forwardRef } from 'react'
+import { ComponentPropsWithRef, forwardRef } from 'react'
 import { jsx } from 'theme-ui'
 
 interface Props extends ComponentPropsWithRef<'button'> {

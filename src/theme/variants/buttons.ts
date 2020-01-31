@@ -1,5 +1,3 @@
-import { transition } from 'theme/variables'
-
 export default {
   buttons: {
     primary: {
@@ -15,7 +13,7 @@ export default {
       bg: 'secondary',
       borderRadius: 3,
       '&:hover': {
-        bg: 'primary',
+        bg: 'muted',
       },
     },
   },

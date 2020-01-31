@@ -9,7 +9,7 @@ import { useInView } from 'react-intersection-observer'
  * @constructor
  */
 export const SpringFadeUp: FC = ({ children }) => {
-  const [ref, inView, entry] = useInView({
+  const [ref, inView] = useInView({
     triggerOnce: true,
     threshold: 0,
   })

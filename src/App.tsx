@@ -3,7 +3,7 @@ import { Route, Switch } from 'react-router-dom'
 import { ThemeProvider } from 'theme-ui'
 
 // Theme
-import theme from 'theme'
+import { theme } from 'theme'
 
 // Routes
 import { Home } from 'pages/Home'

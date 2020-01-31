@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import React, { FC } from 'react'
+import { FC } from 'react'
 import { jsx, Styled } from 'theme-ui'
 
 // Utils
@@ -21,7 +21,8 @@ export const Home: FC = () => {
               <Heading variant="h1">Heading h1</Heading>
 
               <Flex sx={{ my: 3 }}>
-                <Button>Theme button</Button>
+                <Button mr={3}>Theme button</Button>
+                <Button variant={'secondary'}>Theme button</Button>
               </Flex>
 
               <Styled.h1 as="h2">Hello, styled heading!</Styled.h1>
